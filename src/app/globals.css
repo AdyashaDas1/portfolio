@@ -1,0 +1,314 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f0f7ff;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #dbeafe; }
+::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #1d4ed8; }
+
+/* =========================================
+   MARQUEE
+   ========================================= */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+/* =========================================
+   PULSE (for dot in navbar badge)
+   ========================================= */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+.dot-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* =========================================
+   GRADIENT TEXT
+   ========================================= */
+.grad-text {
+  background: linear-gradient(135deg, #1e6bff 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =========================================
+   SECTION BACKGROUNDS
+   ========================================= */
+.bg-blue-soft  { background-color: #f0f7ff; }
+.bg-white-pure { background-color: #ffffff; }
+.bg-dark-navy  { background-color: #0f172a; }
+
+/* =========================================
+   GLOW BLOBS (background decoration)
+   ========================================= */
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.blob-blue   { background-color: #bfdbfe; }
+.blob-sky    { background-color: #bae6fd; }
+.blob-indigo { background-color: #c7d2fe; }
+
+/* =========================================
+   CARDS
+   ========================================= */
+.card {
+  background: #ffffff;
+  border: 1.5px solid #bfdbfe;
+  border-radius: 28px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 24px 60px rgba(30, 107, 255, 0.15);
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #1e6bff, #0ea5e9);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(30, 107, 255, 0.35);
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 2px solid #93c5fd;
+  color: #1e6bff;
+  font-weight: 600;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  font-size: 15px;
+}
+.btn-outline:hover {
+  background: #dbeafe;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   SECTION LABEL PILL
+   ========================================= */
+.section-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: #dbeafe;
+  border: 1.5px solid #93c5fd;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #1e6bff;
+  margin-bottom: 20px;
+}
+
+/* =========================================
+   TIMELINE
+   ========================================= */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #1e6bff, #38bdf8);
+  transform: translateX(-50%);
+  opacity: 0.25;
+}
+.timeline-dot {
+  position: absolute;
+  top: 40px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e6bff, #38bdf8);
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 0 3px rgba(30,107,255,0.2);
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+.navbar.scrolled {
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #dbeafe;
+  box-shadow: 0 4px 24px rgba(30,107,255,0.08);
+}
+.navbar.top {
+  background: rgba(240,247,255,0.6);
+  backdrop-filter: blur(8px);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer a { text-decoration: none; }
+
+/* =========================================
+   HOVER LIFT
+   ========================================= */
+.hover-lift {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(30,107,255,0.15);
+}
+
+/* =========================================
+   IMAGE CARD
+   ========================================= */
+.img-card {
+  position: relative;
+  z-index: 10;
+  border-radius: 36px;
+  overflow: hidden;
+  background: #fff;
+  border: 1.5px solid #bfdbfe;
+  padding: 10px;
+  box-shadow: 0 32px 80px rgba(30,107,255,0.15);
+  transition: transform 0.5s ease;
+}
+.img-card:hover { transform: translateY(-10px); }
+.img-card img {
+  border-radius: 28px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+  display: block;
+}
+.img-card:hover img { transform: scale(1.04); }
+
+/* =========================================
+   SKILL / PROJECT CARD ICON
+   ========================================= */
+.icon-box {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #fff;
+  background: linear-gradient(135deg, #1e6bff, #38bdf8);
+  box-shadow: 0 8px 24px rgba(30,107,255,0.3);
+  transition: transform 0.4s ease;
+  flex-shrink: 0;
+}
+.card:hover .icon-box { transform: scale(1.1) rotate(6deg); }
+
+/* =========================================
+   INPUT FIELDS
+   ========================================= */
+.field {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1.5px solid #bfdbfe;
+  border-radius: 14px;
+  background: #f8fbff;
+  color: #0f172a;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 8px;
+  font-family: inherit;
+}
+.field::placeholder { color: #94a3b8; }
+.field:focus {
+  border-color: #1e6bff;
+  box-shadow: 0 0 0 3px rgba(30,107,255,0.12);
+}
+
+/* =========================================
+   SOCIAL ICON CIRCLE
+   ========================================= */
+.social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  color: #94a3b8;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.05);
+}
+.social-btn:hover {
+  background: linear-gradient(135deg, #1e6bff, #38bdf8);
+  border-color: transparent;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(30,107,255,0.35);
+}
+
+/* =========================================
+   RESPONSIVE GRID HELPERS
+   ========================================= */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section-pad { padding: 120px 0; }
+
+@media (max-width: 768px) {
+  .section-pad { padding: 80px 0; }
+  .hide-mobile { display: none !important; }
+}
