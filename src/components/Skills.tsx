@@ -198,9 +198,9 @@ const Skills = () => {
       {/* Noise Overlay */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:url('data:image/svg+xml,%3Csvg_viewBox=%270_0_256_256%27_xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cfilter_id=%27noise%27%3E%3CfeTurbulence_type=%27fractalNoise%27_baseFrequency=%270.85%27_numOctaves=%274%27_stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect_width=%27100%25%27_height=%27100%25%27_filter=%27url(%23noise)%27/%3E%3C/svg%3E')]"></div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 w-[92%] mx-auto max-w-7xl">
         {/* Heading */}
-        <div className="mx-auto mb-20 max-w-7xl px-6">
+        <div className="mb-20">
           {/* Pill */}
           <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-5 py-2 text-[11px] font-semibold uppercase tracking-[3px] text-emerald-400">
   <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_#34d399]" />
@@ -224,7 +224,7 @@ const Skills = () => {
         </div>
 
         {/* <div className="relative z-10 overflow-hidden"> */}
-        <div className="relative z-10 mx-auto max-w-7xl overflow-hidden px-6">
+        <div className="relative overflow-hidden">
           <div className="marquee flex w-max items-center gap-20">
             {[...skills, ...skills].map((skill, index) => (
               <div

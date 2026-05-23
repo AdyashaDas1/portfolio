@@ -56,9 +56,8 @@ const Footer = () => (
     />
 
     <div
-      className="section-container"
+      className="section-container relative w-[92%] mx-auto max-w-7xl"
       style={{
-        position: "relative",
         zIndex: 10,
       }}
     >

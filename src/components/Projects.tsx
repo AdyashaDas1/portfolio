@@ -55,16 +55,22 @@ const Projects = () => {
   }, []);
 
   return (
+    // <section
+    //   ref={sectionRef}
+    //   id="projects"
+    //   style={{
+    //     padding: "130px 0",
+    //     background: "#0D0D0D",
+    //     position: "relative",
+    //     overflow: "hidden",
+    //   }}
+    // >
     <section
-      ref={sectionRef}
-      id="projects"
-      style={{
-        padding: "130px 0",
-        background: "#0D0D0D",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
+  ref={sectionRef}
+  id="projects"
+  className="relative overflow-hidden bg-[#0D0D0D] py-[130px]"
+  style={{ position: "relative", overflow: "hidden" }}
+>
     {/* BACKGROUND BLOBS */}
     <div
       className="blob1"
@@ -89,12 +95,9 @@ const Projects = () => {
     />
 
     <div
-      className="section-container"
-      style={{
-        position: "relative",
-        zIndex: 10,
-      }}
-    >
+  className="relative w-[92%] mx-auto max-w-7xl"
+  style={{ zIndex: 10 }}
+>
       {/* HEADING */}
       <div
         style={{

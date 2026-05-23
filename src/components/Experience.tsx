@@ -78,12 +78,9 @@ const Experience = () => {
     />
 
     <div
-      className="section-container"
-      style={{
-        position: "relative",
-        zIndex: 10,
-      }}
-    >
+  className="relative w-[92%] mx-auto max-w-7xl"
+  style={{ zIndex: 10 }}
+>
       {/* HEADING */}
       <div
         style={{
@@ -284,7 +281,7 @@ const Experience = () => {
       /* TIMELINE */
       .timeline-wrapper {
         position: relative;
-        max-width: 1000px;
+        max-width: 100%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;

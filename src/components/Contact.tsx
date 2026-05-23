@@ -428,9 +428,9 @@ const Contact = () => {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:70px_70px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
+      <div className="relative z-10 w-[92%] mx-auto max-w-7xl">
         {/* TOP CONTENT */}
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           {/* BADGE */}
           <div className="animate-fade inline-flex items-center gap-3 rounded-full border border-emerald-400/20 bg-emerald-400/5 px-4 py-2 backdrop-blur-xl">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
